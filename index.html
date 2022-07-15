@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <!-- jQuery插件 -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <!-- swiper引入js -->
+    <script src="./js/swiper.min.js"></script>
+    <!-- swiper引入css -->
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <!-- bootstrap引入css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- 轮播图引入css -->
+    <link rel="stylesheet" href="./css/slideShow.css">
+    <!-- 瀑布图引入css -->
+    <link rel="stylesheet" type="text/css" href="./css/chromagallery.css" />
+    <!-- 合作引入css -->
+    <link rel="stylesheet" href="./css/cooperation.css">
+    <!-- 顶部导航栏  css-->
+    <link rel="stylesheet" href="./css/NavTrunk.css">
+    <!-- 引入视频css -->
+    <link rel="stylesheet" href="./css/video.css">
+    <!-- 底部导航 -->
+    <link rel="stylesheet" href="./css/bottom.css">
+    <!-- 轮播图引入js -->
+    <script src="./js/slideShow.js"></script>
+    <!-- 过渡图引入js -->
+    <script src="./js/transition.js"></script>
+    <!-- 引入视频js -->
+    <script src="./js/video.js"></script>
+    <!-- 本页部分样式 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 样式 -->
+    <style class="cp-pen-styles">
+        /* 瀑布图 */
+        .content {
+            width: 100%;
+            height: 100%;
+            margin: 10px auto;
+        }
+
+        /* 图标 */
+
+        .swiper-container {
+            width: 100%;
+            height: 500px;
+        }
+
+        .swiper-slide {
+            margin: 6% 0;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            height: calc((100% - 30px) / 2);
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 980px)
+
+        /* Desktop */
+            {
+            .content {
+                width: 70%;
+            }
+        }
+
+        .mygallery {
+            margin: 25px 0;
+        }
+
+        /* 瀑布图上 */
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            /* font-size: 62.5%; */
+            background-color: black;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .transition {
+            /* margin-top: 500px; */
+            /* margin-top: 524px; */
+            margin-top: 600px;
+            position: relative;
+            /* height: 100vh; */
+            height: 800px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #c6d9d3;
+        }
+
+        .transition .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .transition .overlay h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            margin: 0;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 9rem;
+            text-shadow: 25px -15px rgba(25, 42, 46, 0.04);
+            color: #142124;
+            mix-blend-mode: overlay;
+        }
+
+        .transition .overlay h1 span {
+            margin-top: -2em;
+            padding-top: 0.5em;
+            display: block;
+            letter-spacing: 5px;
+            font-size: 1.25rem;
+        }
+
+        .transition .parallax {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .transition .parallax div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-position: 0 50%;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .transition .parallax .one {
+            background-image: url("svg/mountains-1.svg");
+            z-index: 4;
+        }
+
+        .transition .parallax .two {
+            background-image: url("svg/mountains-2.svg");
+            z-index: 3;
+        }
+
+        .transition .parallax .three {
+            background-image: url("svg/mountains-3.svg");
+            z-index: 2;
+        }
+
+        .transition .parallax .four {
+            background-image: url("svg/mountains-4.svg");
+            z-index: 1;
+        }
+
+        .transition .parallax .five {
+            background-image: url("svg/mountains-5.svg");
+            z-index: 0;
+        }
+
+        main {
+            position: relative;
+            margin-bottom: 15vh;
+            padding: 2em 4em;
+            min-height: 85vh;
+            background-color: #e8f4f8;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        main .container {
+            font-size: 1rem;
+            color: #192a2e;
+        }
+
+        main .container pre {
+            padding: 1em;
+            border-radius: 0.25em;
+            background-color: rgba(25, 42, 46, 0.05);
+        }
+
+        main .container a {
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 500;
+            border-bottom: 2px dashed;
+            color: #192a2e;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            display: flex;
+            min-height: 15vh;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            background-color: #192a2e;
+            color: #c6d9d3;
+        }
+
+        footer a {
+            padding-bottom: .25em;
+            text-decoration: none;
+            border-bottom: 1px dashed #c6d9d3;
+            color: #c6d9d3;
+        }
+
+        .hhh {
+            background-color: black;
+            height: 0px;
+            width: 0px;
+            display: block;
+            overflow: hidden;
+        }
+
+        .ttt {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 顶部导航条 -->
+    <div class="navContainer">
+        <header class="slide navTop">
+            <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+            <ul id="navToggle" class="burger slide">
+                <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <!-- <h1>Trunk.js</h1> -->
+            <h1><img src="./images/navTopImage.png" alt="顶部loge"></h1>
+        </header>
+        <nav class="slide">
+            <ul>
+                <li><a href="index.html" class="active">主页</a></li>
+                <li><a href="showWork.html">影片展示</a></li>
+                <li><a href="actors.html">优秀演员</a></li>
+                <li><a href="list.html">获奖名单</a></li>
+                <li><a href="introductionAward.html">奖项介绍</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <!-- 轮播图 -->
+    <div id="imageFlow">
+        <!-- <div class="top"></div> -->
+        <div class="bank">
+            <a rel="images/flow/rotation-1.jpg" title="姜子牙" href="#">
+                昆仑弟子姜子牙，率领众神战胜狐妖，推翻了残暴的商王朝，
+                赢得封神大战的胜利，即将受封为众神之长。在巅峰时刻，他却因一时
+                之过被贬下凡间。失去神力，被世人唾弃。为重回昆仑，姜子牙踏上旅途。
+                在战后的废墟之上，他重新找到了自我，也发现了当年一切的真相</a>
+            <a rel="images/flow/rotation-2.jpg" title="哪吒之魔童降世" href="#">
+                哪吒出生时因灵珠被申公豹所偷，而成为魔丸转世。起初哪吒因是魔丸从小遭受陈塘关百姓的歧视、排斥、
+                嘲笑和敌对，但随着剧情的发展哪吒逐渐被百姓认可</a>
+            <a rel="images/flow/rotation-3.jpg" title="唐人街探案3" href="#">
+                曼谷夺金杀人案“纽约五行连环杀人案”后，“唐人街神探组合”唐仁，秦
+                风被野田昊请到东京，调查一桩离奇的谋杀案</a>
+            <a rel="images/flow/rotation-4.jpg" title="大侦探皮卡丘" href="#">
+                该片改编自任天堂3DS同名游戏，讲述了大侦探皮卡丘和蒂姆在莱姆市相遇，为了揭开蒂姆
+                之父离奇失踪隐情，携手探案、追击真相的故事</a>
+            <a rel="images/flow/rotation-5.jpg" title="我不是药神" href="#">
+                该片讲述了神油店老板程勇从一个交不起房租的男性保健品商贩，一跃成为印度仿制药“
+                格列宁”独家代理商的故事</a>
+            <a rel="images/flow/rotation-6.jpg" title="小丑" href="#">
+                故事背景设定在1980年代，讲述小丑的起源故事 。该片是华纳和DC所独立开发的影片，
+                与DC扩展宇宙并无关联</a>
+            <a rel="images/flow/rotation-7.jpg" title="扫毒2：天地对决" href="#">
+                该片以“毒品”为线索，讲述了慈善家兼金融巨子余顺天与香港最大毒贩地藏
+                之间由“禁毒”引发的一场天地对决</a>
+            <a rel="images/flow/rotation-8.jpg" title="白蛇：缘起" href="#">
+                影片在中国民间传说“白蛇传”基础上有所创新，讲述白素贞在五百年前与许
+                仙的前身阿宣之间一段刻骨铭心的爱情故事</a>
+            <a rel="images/flow/rotation-9.jpg" title="沉默的证人" href="#">
+                该片讲述了陈嘉豪和乔琳两位法医为了保护证物揭开真相，与悍匪团伙在法医中心展
+                开的一场搏命寻证的故事</a>
+            <a rel="images/flow/rotation-10.jpg" title="解忧杂货店" href="#">
+                该片改编自东野圭吾的同名小说，讲述一家名为“解忧杂货店”的店铺，人们只要在晚上把他们的
+                烦恼写在信上然后丢进铁卷门的投递口，隔天就可以在店后的牛奶箱里取得解答信的故事</a>
+            <a rel="images/flow/rotation-11.jpg" title="声之形" href="#">
+                作品以主人公的石田将也和先天性听觉障碍的西宫硝子为中心，讲述了人与人之间的复杂联系和交流。作品
+                的宣传口号是：“帮你活下去”</a>
+            <a rel="images/flow/rotation-12.jpg" title="神探蒲松龄" href="#">
+                该片讲述了一代文豪蒲松龄执阴阳判化身神探，与捕快严飞联手追踪少女失踪案，从而牵扯出一段旷世奇恋
+                的故事</a>
+            <a rel="images/flow/rotation-13.jpg" title="三生三世十里桃花" href="#">
+                该片以网络长篇小说《三生三世十里桃花》为基础改编，讲述了青丘帝姬白浅和九重天太子夜华的三生情缘</a>
+            <a rel="images/flow/rotation-14.jpg" title="战狼Ⅱ" href="#">
+                该片讲述了脱下军装的冷锋被卷入了一场非洲国家的叛乱，本来能够安全撤离的他无法忘记军人的职责，重回战场
+                展开救援的故事</a> </div>
+        <div class="text">
+            <div class="title">
+                Loading</div>
+            <div class="legend">
+                Please images/wait...</div>
+        </div>
+    </div>
+    <!-- 过渡效果 -->
+    <div class="transition">
+        <div class="overlay">
+            <div class="parallax">
+                <h1>BestForYou<span>Parallax Scrolling</span></h1>
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+                <div class="five"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 瀑布图 -->
+    <article class="htmleaf-container">
+        <div class="content">
+            <div class="chroma-gallery mygallery">
+                <img src="images/waterfall/1.jpg" alt="Pic 1" data-largesrc="images/waterfall/1.jpg">
+                <img src="images/waterfall/2.jpg" alt="Pic 2" data-largesrc="images/waterfall/2.jpg">
+                <img src="images/waterfall/3.jpg" alt="Pic 3" data-largesrc="images/waterfall/3.jpg">
+                <img src="images/waterfall/4.jpg" alt="Pic 4" data-largesrc="images/waterfall/4.jpg">
+                <img src="images/waterfall/5.jpg" alt="Pic 5" data-largesrc="images/waterfall/5.jpg">
+                <img src="images/waterfall/6.jpg" alt="Pic 6" data-largesrc="images/waterfall/6.jpg">
+                <img src="images/waterfall/7.jpg" alt="Pic 7" data-largesrc="images/waterfall/7.jpg">
+                <img src="images/waterfall/8.jpg" alt="Pic 8" data-largesrc="images/waterfall/8.jpg">
+                <img src="images/waterfall/9.jpg" alt="Pic 9" data-largesrc="images/waterfall/9.jpg">
+                <img src="images/waterfall/10.jpg" alt="Pic 10" data-largesrc="images/waterfall/10.jpg">
+                <img src="images/waterfall/11.jpg" alt="Pic 11" data-largesrc="images/waterfall/11.jpg">
+                <img src="images/waterfall/12.jpg" alt="Pic 12" data-largesrc="images/waterfall/12.jpg">
+                <img src="images/waterfall/13.jpg" alt="Pic 13" data-largesrc="images/waterfall/13.jpg">
+                <img src="images/waterfall/14.jpg" alt="Pic 14" data-largesrc="images/waterfall/14.jpg">
+                <img src="images/waterfall/15.jpg" alt="Pic 15" data-largesrc="images/waterfall/15.jpg">
+                <img src="images/waterfall/16.jpg" alt="Pic 16" data-largesrc="images/waterfall/16.jpg">
+                <img src="images/waterfall/17.jpg" alt="Pic 17" data-largesrc="images/waterfall/17.jpg">
+                <img src="images/waterfall/18.jpg" alt="Pic 18" data-largesrc="images/waterfall/18.jpg">
+            </div>
+        </div>
+    </article>
+    <!-- 视频播放 -->
+    <div class="Lunbo-video">
+        <div align="center" style="padding:20px;">
+        </div>
+        <div class="Lunbo-video-cont">
+            <div class="video">
+                <div> <img src="./images/video/left.png" class="Lunbobutton"> </div>
+                <div>
+                    <ul>
+                        <li class="video1">
+                            <div>
+                                <video id="v001" src="./vidoes/video-1.mp4" poster="./images/video/video-1.png"
+                                    controls>
+                                </video>
+                            </div>
+                        </li>
+                        <li class="video2">
+                            <div>
+                                <video id="v002" src="./vidoes/video-2.mp4" poster="./images/video/video-2.png"
+                                    controls></video>
+                            </div>
+                        </li>
+                        <li class="video3">
+                            <div>
+                                <video id="v003" src="./vidoes/video-3.mp4" poster="./images/video/video-3.png"
+                                    controls></video>
+                            </div>
+                        </li>
+                        <li class="video4">
+                            <div>
+                                <video id="v004" src="./vidoes/video-4.mp4" poster="./images/video/video-4.png"
+                                    controls></video>
+                            </div>
+                        </li>
+                        <li class="video5">
+                            <div>
+                                <video id="v005" src="./vidoes/video-5.mp4" poster="./images/video/video-5.png"
+                                    controls></video>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div><img src="./images/video/right.png" class="Lunbobutton"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <label>Slamdance电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-1.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>皇宫国际短片电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-2.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>西班牙希洪国际电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-3.jpg" alt=""></a>
+            </div>
+
+            <div class="swiper-slide">
+                <label>洛杉矶国际短片电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-5.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>格拉斯哥短片电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-6.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>釜山国际短片电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-7.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>VIS维也纳短片电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-8.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>SHOW ME短片电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-9.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>地拉那国际电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-10.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>曼哈顿短片电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-11.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>新奥尔良电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-12.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>美国纪录片电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-13.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>布鲁塞尔短片电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-15.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <label>圣何塞影探电影节</label>
+                <a href="https://www.baidu.com"><img src="./images/cooperation/cooperation-16.jpg" alt=""></a>
+            </div>
+
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <a href="#">返回顶部</a>
+        <!-- 联系我们 -->
+        <a href="javascript:;" class="lxwm">联系我们</a>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">填写信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">收件</label>
+                                <input type="text" class="form-control" id="recipient-name" value="1464815392@qq.com">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="message-text" style="height: 200px;"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 联系我们结束 -->
+    </div>
+    <!-- 瀑布图引入js -->
+    <script src="./js/chromagallery.pkgd.min.js" type="text/javascript"></script>
+    <!-- bootstrap引入js -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        // 瀑布图启动
+        $(".mygallery").chromaGallery({
+            color: '#000',
+            gridMargin: 15,
+            maxColumns: 4,
+            // dof: true,
+            screenOpacity: 0.8
+        });
+        // 弹出联系我们
+        $(".lxwm").on("click", function () {
+            $("#exampleModal").modal();
+        });
+        // 展示
+        effect = 0
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            speed: 2500,
+            slidesPerView: 7,
+            spaceBetween: 30,
+            centeredSlides: true,
+            watchSlidesProgress: true,
+            on: {
+                setTranslate: function () {
+                    slides = this.slides
+                    for (i = 0; i < slides.length; i++) {
+                        slide = slides.eq(i)
+                        progress = slides[i].progress
+                        //slide.html(progress.toFixed(2)); 看清楚progress是怎么变化的
+                        slide.css({
+                            'opacity': '',
+                            'background': ''
+                        });
+                        slide.transform(''); //清除样式
+
+                        if (effect == 1) {
+                            slide.transform('scale(' + (1 - Math.abs(progress) / 8) + ')');
+                        } else if (effect == 2) {
+                            slide.css('opacity', (1 - Math.abs(progress) / 6));
+                            slide.transform('translate3d(0,' + Math.abs(progress) * 20 + 'px, 0)');
+                        } else if (effect == 3) {
+                            slide.transform('rotate(' + progress * 30 + 'deg)');
+                        } else if (effect == 4) {
+                            slide.css('background', 'rgba(' + (255 - Math.abs(progress) * 20) + ',' + (127 +
+                                progress * 32) + ',' + Math.abs(progress) * 64 + ')');
+                        }
+
+                    }
+                },
+                setTransition: function (transition) {
+                    for (var i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i)
+                        slide.transition(transition);
+                    }
+                },
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+
+</html>

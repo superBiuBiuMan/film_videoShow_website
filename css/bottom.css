@@ -1,0 +1,16 @@
+.footer {
+    border-top: #3E434A 5px solid;
+    height: 60px; 
+    width: 100%;
+    padding: 0 45%;
+
+}
+
+.footer a{
+    color: blanchedalmond;
+    margin-right: 5%;
+    line-height: 50px;
+}
+.footer a:hover{
+    color: gray;
+}

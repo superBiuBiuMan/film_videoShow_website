@@ -1,0 +1,25 @@
+.swiper-slide {
+    position: relative;
+}
+
+.swiper-slide label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    color: white;
+    display: none;
+}
+
+.swiper-slide:hover label {
+    opacity: 0.5;
+    display: inline-block
+}
+
+.swiper-slide {
+    border: 1px solid pink;
+    border-radius: 10px;
+    background-color: black !important;
+}
+

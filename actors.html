@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>优秀演员</title>
+	<!-- jQuery引入 -->
+	<script src="./js/jquery-3.5.1.min.js"></script>
+	<!-- sortable引入js -->
+	<link rel="stylesheet" href="./css/sortable.min.css">
+	<!-- sortable引入js -->
+	<script type="text/javascript" src="./js/sortable.min.js"></script>
+	<!-- bootstrap引入js -->
+	<script src="./js/bootstrap.min.js"></script>
+	<!-- bootstr引入css -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<!-- 顶部导航栏 css-->
+	<link rel="stylesheet" href="./css/NavTrunk.css">
+	<!-- 顶部导航栏 js-->
+	<script type="text/javascript" src="./js/NavTrunk.js"></script>
+	<!-- 本页css引入 -->
+	<link rel="stylesheet" href="./css/actors.css">
+	<!-- 底部导航 -->
+	<link rel="stylesheet" href="./css/bottom.css">
+</head>
+
+<body>
+	<!-- 顶部导航条 -->
+	<div class="navContainer">
+		<header class="slide navTop">
+			<ul id="navToggle" class="burger slide">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<h1><img src="./images/navTopImage.png" alt="顶部loge"></h1>
+		</header>
+		<nav class="slide">
+			<ul>
+				<li><a href="index.html" class="active">主页</a></li>
+				<li><a href="showWork.html">影片展示</a></li>
+				<li><a href="actors.html">优秀演员</a></li>
+				<li><a href="list.html">获奖名单</a></li>
+				<li><a href="introductionAward.html">奖项介绍</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- 图片内容 -->
+	<div class="htmleaf-container">
+		<main class="sortable">
+			<div class="inside">
+				<div class="wrapper">
+					<ul class="sortable__nav nav">
+						<li>
+							<a data-sjslink="all" class="nav__link">
+								<!-- All -->
+								所有
+							</a>
+						</li>
+						<li>
+							<a data-sjslink="flatty" class="nav__link">
+								<!-- Flatty -->
+								女演员
+							</a>
+						</li>
+						<li>
+							<a data-sjslink="funny" class="nav__link">
+								<!-- funny -->
+								男演员
+							</a>
+						</li>
+					</ul>
+					<div id="sortable" class="sjs-default">
+						<div data-sjsel="flatty">
+							<div class="card">
+								<a href="https://www.baidu.com"> <img class="card__picture"
+										src="./images/actors/actors-1.png" alt=""></a>
+
+								<div class="card-infos">
+									<h2 class="card__title">蕾妮·齐薇格</h2>
+									<p class="card__text">
+										1969年，蕾妮·齐薇格出生在美国德克萨斯的一个小镇上，小镇上没有有线电视和剧院，蕾妮齐薇
+										格直到她上大学才看了第一场电影，在大学里蕾妮齐薇格选修了一门表演课，并被发现有表演的天份。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-2.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">斯嘉丽·约翰逊</h2>
+									<p class="card__text">
+										斯嘉丽·约翰逊（Scarlett Johansson），1984年11月22日出生于美国纽约，美国女演员、歌手。1994年，出演了电影处女作《浪子保镖》。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-3.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">西尔莎·罗南</h2>
+									<p class="card__text">
+										2003年，参演个人首部电视剧《急诊室》。2007年，凭借爱情电影《赎罪》入围第65届美国电影电视金球奖电影类-最佳女配角奖。2009年，主演奇幻惊悚电影《可爱的骨头》。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-4.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">杰昆·菲尼克斯</h2>
+									<p class="card__text">
+										1986年，出演个人第一部电影《太空险航》而正式进入娱乐圈。1995年，出演惊悚片《不惜一切》。2000年，凭借动作片《角斗士》获得第73届奥斯卡最佳男配角提名
+										。2002年，出演科幻片《天兆》 。2005年
+										，主演音乐传记片《与歌同行》，他凭借此片获得第63届金球奖电影类音乐喜剧类最佳男主角奖
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-5.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">查理兹·塞隆</h2>
+									<p class="card__text">
+										1995年，出演了电影处女作《玉米田的小孩3》。1997年，主演了惊悚悬疑电影《魔鬼代言人》。2000年9月14日，主演的传记电影《怒海潜将》上映。2003年，领衔主演了传记电影
+										《女魔头》，凭借该片获得了第61届美国电影电视金球奖电影类-剧情类最佳女主角
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-6.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">奥利维娅·科尔曼</h2>
+									<p class="card__text">
+										2000年，出演个人首部电视剧《六贱客》 [1] 。2003年，在电视剧《窥视秀第一季》中饰演信贷公司的员工索菲 。2007年，凭借
+										电视剧《窥视秀第四季》提名第47届蒙特卡洛国际电视节金仙女奖喜剧类最佳女演员。2011年，凭借电影《暴龙》获得第27届圣丹斯电影节世界
+										剧情片单元评委会特别奖最佳表演
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-7.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">格伦·克洛斯</h2>
+									<p class="card__text">
+										格伦·克洛斯（Glenn Close），1947年3月19日出生于美国康涅狄格州格林尼治，毕业于威廉与玛丽学院，美国演员、歌手、制片人。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-8.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">莱昂纳多·迪卡普里奥</h2>
+									<p class="card__text">
+										1990年，16岁的他参加了电视剧《成长的烦恼》的拍摄。1993年，他凭借《不一样的天空》中的表演获得了第66届奥斯
+										卡金像奖最佳男配角奖和第51届美国电影电视金球奖最佳男配角的提名。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-9.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">亚当·德赖弗</h2>
+									<p class="card__text">
+										亚当·德赖弗（Adam Douglas Driver），1983年11月19日出生于美国加利福尼亚州圣地亚哥，美国演员，毕业于茱莉亚学院戏剧专业。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-10.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">乔纳森·普雷斯</h2>
+									<p class="card__text">
+										父亲是一名煤矿工人，母亲是商店收银员。16岁时乔纳离开父母，进入一所艺术学校读书，开始对戏剧产生兴趣，后来在伦敦皇家戏剧
+										艺术学院学习表演。毕业后他加入了利物浦人人剧院，成了一名艺术总监
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-11.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">拉米·马雷克</h2>
+									<p class="card__text">
+										2004年，出演现代家庭伦理剧《吉尔莫女孩》，从而开始演艺生涯。2005年，他出演的情景喜剧《家庭战争》开播。2006年，出演奇幻喜剧
+										片《博物馆奇妙夜》，这是他的电影处女作
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-12.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">梅丽莎·麦卡西</h2>
+									<p class="card__text">
+										2011年1月，梅丽莎·麦卡西凭借喜剧剧集《迈克和莫莉》摘得第63届艾美奖喜剧最佳女主角奖。2012年1月24日，梅丽莎·麦卡西获得凭借在电影《伴娘
+										》中的表演获得第84届奥斯卡最佳女配角提名
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-13.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">Lady Gaga</h2>
+									<p class="card__text">
+										Lady Gaga，原名史蒂芬妮·乔安妮·安吉丽娜·杰尔马诺塔（Stefani Joanne Angelina
+										Germanotta），1986年3月28日出生于美国
+										纽约曼哈顿，美国女歌手、词曲作者、演员、慈善家。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-14.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">弗兰西斯·麦克多蒙德</h2>
+									<p class="card__text">
+										984年，主演个人首部电影《血迷宫》，正式进入娱乐圈。1985年，参演刑警剧《希尔街的布鲁斯》。1988年，凭借舞台剧《欲望号街车》入围第42届托尼奖戏剧类最佳女主角奖
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-15.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">维果·莫腾森</h2>
+									<p class="card__text">
+										985年，参演个人首部电影《目击者》 。1991年，主演剧情电影《印第安信使》
+										。1993年，参演警匪电影《伦敦街头档案》。1995年，主演动作电影《红潮风暴》。1998年，主演剧情电影《魔鬼女大兵》
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-16.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">威廉·达福</h2>
+									<p class="card__text">
+										1981年，达福出演了他的电影处女作《天堂之门》。1986年，达福凭借在《野战排》中的表演赢得了个人首个奥斯卡提名。2000年，达福凭借《吸血鬼的阴影》一片中的表演第二次获得“奥斯卡”最佳男配角的提名
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-17.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">布莱德利·库珀</h2>
+									<p class="card__text">
+										1998年，库珀通过电视剧《欲望都市》登台。2009年，他因主演电影《宿醉》而成名。2013年，他凭借《乌云背后的幸福线》中Pat一角获得第85届奥斯卡金像奖最佳男主角提名
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-18.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">克里斯蒂安·贝尔</h2>
+									<p class="card__text">
+										3岁时，贝尔主演斯蒂芬·斯皮尔伯格执导的电影《太阳帝国》而成名，被英国影评人协会评为当年最优秀的青少年演员。2005年，贝
+										尔主演了《蝙蝠侠：侠影之谜》，之后又在续集《蝙蝠侠：黑暗骑士》和《蝙蝠侠：黑暗骑士崛起》中出演蝙蝠侠
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="funny">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-19.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">丹尼尔·戴-刘易斯</h2>
+									<p class="card__text">
+										1971年，丹尼尔·戴-刘易斯出演首部电影《血腥星期天》。1990年凭借《我的左脚》获得第62届奥斯卡金像奖最佳男主角。2008年凭借《血色将至》获得第80届奥斯卡金像奖最佳男主角
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-20.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">玛格特·罗比</h2>
+									<p class="card__text">
+										2008年，参演个人首部电视剧《邻居》，从而开始演艺生涯 ；同年，主演个人首部电影《Vigilante》 。2009年，主演惊悚电影《我在看着你》
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-21.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">梅丽尔·斯特里普</h2>
+									<p class="card__text">
+										1975年，出演舞台剧《特里劳妮的舞台》，从而进入演艺圈 [1] 。1976年，凭借话剧《27车棉花/两个星期一的回忆》提名第30届托尼奖话剧类最佳女配角
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-22.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">莎莉·霍金斯</h2>
+									<p class="card__text">
+										1998年，参演舞台剧《意外死亡》。1999年，参演个人首部电影《星球大战1：魅影危机》，从而正式进入娱乐圈。2002年，参演剧情电影《折翼天使》。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div data-sjsel="flatty">
+							<div class="card">
+								<img class="card__picture" src="./images/actors/actors-23.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">艾玛·斯通</h2>
+									<p class="card__text">
+										2005年，参加真人秀节目《寻找帕拉特里德家庭》。2007年，出演青春喜剧电影《太坏了》 。2009年，出演恐怖电影《僵尸之地》
+										，她凭借该片入围第12届青少年选择奖最佳喜剧电影女演员奖
+									</p>
+								</div>
+							</div>
+							<!-- <div class="card">
+								<img class="card__picture" src="./images/actors/actors-1.png" alt="">
+								<div class="card-infos">
+									<h2 class="card__title">Example 9</h2>
+									<p class="card__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur adipisci
+										voluptatum laborum officiis...
+									</p>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+
+	</div>
+	<!-- 底部 -->
+	<div class="footer">
+		<a href="#">返回顶部</a>
+		<!-- 联系我们 -->
+		<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+				data-whatever="@getbootstrap">Open modal for @getbootstrap</button> -->
+		<a href="javascript:;" class="lxwm">联系我们</a>
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="exampleModalLabel">填写信息</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="recipient-name" class="control-label">收件</label>
+								<input type="text" class="form-control" id="recipient-name" value="1464815392@qq.com">
+							</div>
+							<div class="form-group">
+								<!-- <label for="message-text" class="control-label">信息</label> -->
+								<textarea class="form-control" id="message-text" style="height: 200px;"></textarea>
+								<!-- <textarea for="message-text" class="control-label" name="" id="" cols="9" rows="10" style=" border-radius: 4px"></textarea> -->
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">发送信息</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 联系我们结束 -->
+	</div>
+	<script type="text/javascript">
+		document.querySelector('#sortable').sortablejs()
+		// 弹出联系我们
+		$(".lxwm").on("click", function () {
+			$("#exampleModal").modal();
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+figure.snip0056 {
+  /* 转化为行内元素 */
+  display: inline-block;
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 10px; 
+  /* padding: 5px 5px; */
+  min-width: 380px;
+  max-width: 480px;
+  /* width: 100%; */
+  width: 50%;
+  background: #ffffff;
+  color: #000000;
+}
+*,
+*:before,
+*:after {
+	/* 添加了这个 */
+	box-sizing: border-box;
+}
+body {
+	/* 添加了这个 */
+	background-color: black!important;
+	margin: 0;
+}
+.htmleaf-container{
+  width: 80%!important;
+  /* padding: 10%; */
+  margin: 0 auto;
+  text-align: center;
+}
+/* 设置字体格式 */
+.snip0056 h5{
+  margin: 10px;
+}
+.snip0056 p{
+  font-size: 13px!important;
+}
+figure.snip0056 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+figure.snip0056>img {
+  width: 50%;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-transform: scale(1.6);
+  transform: scale(1.6);
+  position: relative;
+  float: right;
+  right: -15%;
+  z-index: 1;
+}
+
+figure.snip0056 figcaption {
+  padding: 20px 30px 20px 20px;
+  position: absolute;
+  left: 0;
+  width: 50%;
+}
+
+figure.snip0056 figcaption h2,
+figure.snip0056 figcaption p {
+  margin: 0;
+  text-align: left;
+  padding: 10px 0;
+  width: 100%;
+}
+
+figure.snip0056 figcaption h2 {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+figure.snip0056 figcaption h2 span {
+  font-size: 20px;
+  font-weight: 800;
+  color:#EC6042;
+}
+
+figure.snip0056 figcaption p {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+figure.snip0056 figcaption .icons {
+  width: 100%;
+  text-align: left;
+}
+
+figure.snip0056 figcaption .icons i {
+  font-size: 26px;
+  padding: 5px;
+  top: 50%;
+  color: #000000;
+}
+
+figure.snip0056 figcaption a {
+  /* opacity: 0.3;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s; */
+}
+
+figure.snip0056 figcaption a:hover {
+  opacity: 0.8;
+}
+
+figure.snip0056 .position {
+  width: 100%;
+  text-align: left;
+  padding: 15px 30px;
+  /* font-size: 0.9em; */
+  font-size: 15px;
+  opacity: 1;
+  /* 设置字体斜体 */
+  /* font-style: italic; */
+  color: #ffffff;
+  background: #000000;
+  clear: both;
+}
+
+figure.snip0056.blue .position {
+  background: #20638f;
+}
+
+figure.snip0056.red .position {
+  background: #962d22;
+}
+
+figure.snip0056.yellow .position {
+  background: #bf6516;
+}
+
+figure.snip0056:hover>img,
+figure.snip0056.hover>img {
+  right: -12%;
+}
+
+
+/* Demo purposes only */
+html {
+  height: 100%;
+}
+ 
+body {
+  height: 100%;
+} 
